@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form id="searchform" onsubmit="search()">
+<input name="userid">Enter User ID
+<br>
+<input type="submit" value="Submit">
+
+</form>
+
+<script>
+function search(){
+    var action_src = "api/users/" + document.getElementsByName("userid")[0].value;
+    console.log(action_src);
+    var searchform = document.getElementById('searchform');
+    searchform.action = action_src ;
+}
+</script>
+</body>
+</html>
